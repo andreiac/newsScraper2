@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    
+  
+  <title>Mongo Scraper</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+SC" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+
+  
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Mongo Scraper</a>
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/saved.html">Saved Articles</a>
+      </li>
+      <li class="nav-item">
+        
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+
+<div class="jumbotron text-center" style="margin: 0px; padding: 0px;">
+  
+  <div class="background-image">
+    <img id="jumboImage" src="https://lh4.googleusercontent.com/XQv2eMEZnI8EEWL_xRVFX0OOMzu_onuQ1WoyvIEl_lvNIxVswfxZFljGGLcDc91Iwosa7r3BMMzobDvQAT78ZD2rwuNQoCOfuLxp79Tt8_ySp4Feg-APU23uUJnE75PerMTQ07vF" alt="">
+    <div class="caption">
+        <h1>Mongo Scraper</h1>
+        <p>What would you like to do?</p>
+        <a class="btn btn-info scrape-new" href="/scrape" onclick= alert(message)>SCRAPE NEW ARTICLES!</a>
+        <a class="btn btn-info " onclick= clearArticles()>CLEAR ARTICLES!</a>
+    
+      </div>
+  </div>
+  
+</div>
+<div class="container-fluid article-container">
+ 
+    <div id="wrapper">
+        <div id="articles"></div>
+        <div id="notes"></div>
+      </div>
+</div>
+
+<br>
+
+<footer class="footer">
+ 
+    <p>Mongo Scraper</p>
+    <br>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+<script src="app.js"></script>
+
+<script>
+    var message= "article scraped successfully!"
+
+    function clearArticles(){
+      $("#articles").html("No articles here! Scrape again!");
+}
+
+    </script>
+
+</body>
+
+</html>
+
