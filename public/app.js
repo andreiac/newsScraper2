@@ -5,7 +5,7 @@ $.getJSON("/articles", function(data) {
   
   for (var i = 0; i < data.length; i++) {
     // Display the apropos information on the page
-    $("#articles").append("<div id='wrapper" + data[i]._id + "' data-id='wrapper" + data[i]._id + "' style='margin-left: auto; margin-right: auto; border: 1px solid black;margin-bottom: 15px'><div id='populatedArticle'>" + data[i].title + "<button id='writeNote' data-id='" + data[i]._id + "' class='btn btn-success save' style='float:right; border:1px solid black; margin-left:5px' >Add Note</button><button id='saveArticle' data-id='" + data[i]._id + "' class='btn btn-success save' style='float:right; border:1px solid black' >Save Article</button></div><div id='populatedLink' >" + data[i].link + "</div></div>");
+    $("#articles").append("<div id='wrapper" + data[i]._id + "' data-id='wrapper" + data[i]._id + "' style='margin-left: auto; margin-right: auto; border: 1px solid black;margin-bottom: 15px'><div id='populatedArticle'>" + data[i].title + "<button id='writeNote' data-id='" + data[i]._id + "' class='btn btn-success save' style='float:right; border:1px solid black; margin-left:5px' >Add Note</button><button id='saveArticle' data-id='" + data[i]._id + "' class='btn btn-success save' style='float:right; border:1px solid black' >Save Article</button></div><div id='populatedLink' ><a href=" + data[i].link + "> " + data[i].link + " </a></div></div>");
 
     
     if (data[i].note){
