@@ -27,9 +27,14 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-![MongoDB_URI]
 
-mongoose.connect("mongodb://localhost/mongoHeadlines", { useNewUrlParser: true });
+mongoose.connect
+(
+  process.env.MONGODB_URI || "mongodb://user1:password1@ds241288.mlab.com:41288/heroku_0kj8p98f", 
+  { 
+    useNewUrlParser: true 
+  }
+  );
 
 
 // Routes
